@@ -1,16 +1,16 @@
 :root {
-  --font-sans:
-    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --primary-bg: #000;
+  --secondary-bg: #95ff8d;
+  --main-text: #fff;
+  --font-size: 11px;
 }
 
-html,
 body {
-  background-color: #fff;
-  color-scheme: light;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: #0f172a;
-    color-scheme: dark;
-  }
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--primary-bg);
+  color: var(--main-text);
+  font-size: var(--font-size);
 }
