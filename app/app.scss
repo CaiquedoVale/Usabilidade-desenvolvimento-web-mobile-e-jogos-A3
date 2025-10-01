@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
 :root {
   --primary-bg: #000;
   --secondary-bg: #95ff8d;
@@ -6,11 +8,20 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Righteous", sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   background-color: var(--primary-bg);
   color: var(--main-text);
   font-size: var(--font-size);
+  line-height: normal;
+}
+
+.header-link {
+  color: var(--main-text);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
 }

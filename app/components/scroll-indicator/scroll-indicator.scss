@@ -1,0 +1,27 @@
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 70vh;
+}
+
+.scroll-text {
+  font-size: 1.3rem;
+  color: var(--main-text);
+  margin-bottom: 0.3rem;
+}
+
+.arrow {
+  font-size: 2rem;
+  color: var(--main-text);
+  animation: arrow-bounce 1.2s infinite alternate;
+}
+
+@keyframes arrow-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(16px);
+  }
+}

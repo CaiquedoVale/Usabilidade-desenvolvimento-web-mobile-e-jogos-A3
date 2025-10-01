@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 34px;
+    font-weight: bold;
+    margin-left: calc(100% - 80%);
+  }
+}

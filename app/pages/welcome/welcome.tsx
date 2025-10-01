@@ -1,10 +1,21 @@
+import Header from "~/components/header";
 import "./welcome.scss";
 
 export function Welcome() {
   return (
     <>
       <section>
-        {/* <Header /> */}
+        <Header>
+          <a className="header-link" href="/about">
+            Sobre
+          </a>
+          <a className="header-link" href="/event">
+            Evento
+          </a>
+          <a className="header-link" href="/regulation">
+            Regulamento
+          </a>
+        </Header>
 
         <div className="welcome-container">
           <div className="info-container">
