@@ -4,7 +4,7 @@ import "./welcome.scss";
 export function Welcome() {
   return (
     <>
-      <section>
+      <section className="welcome-section">
         <Header>
           <a className="header-link" href="/about">
             Sobre

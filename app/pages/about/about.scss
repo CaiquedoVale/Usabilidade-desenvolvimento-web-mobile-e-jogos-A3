@@ -2,7 +2,7 @@
   height: 100vh;
   background-image: url("/assets/thumbnail_about.png");
   background-size: cover;
-  background-position: center;
+  background-position: 70% center;
   background-repeat: no-repeat;
 }
 
@@ -13,6 +13,10 @@
 
   .baja-project-explanation {
     font-size: 32px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 
   .card {
@@ -20,7 +24,7 @@
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
     padding: 1rem;
     width: 300px;
-    min-height: 240px;
+    min-height: 265px;
     border: 1px solid var(--secondary-bg);
     margin-bottom: 4rem;
 

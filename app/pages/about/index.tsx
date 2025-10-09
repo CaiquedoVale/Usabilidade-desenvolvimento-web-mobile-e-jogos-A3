@@ -1,5 +1,6 @@
 import Carousel from "~/components/carousel/carousel";
 import "~/components/carousel/carousel.scss";
+import GeminiHelp from "~/components/gemini";
 import Header from "~/components/header";
 import ScrollDownIndicator from "~/components/scroll-indicator/scroll-indicator";
 import "./about.scss";
@@ -99,6 +100,10 @@ export default function AboutPage() {
             ]}
           />
         </div>
+      </section>
+
+      <section className="about-page-section-three">
+        <GeminiHelp />
       </section>
     </>
   );

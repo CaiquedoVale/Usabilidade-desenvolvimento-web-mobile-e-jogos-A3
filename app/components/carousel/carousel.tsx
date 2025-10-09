@@ -1,3 +1,4 @@
+import isMobile from "is-mobile";
 import React from "react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -17,7 +18,7 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       modules={[Pagination]}
       spaceBetween={10}
-      slidesPerView={3}
+      slidesPerView={isMobile() ? 1 : 3}
       navigation
       pagination={{ clickable: true, dynamicBullets: true }}
       scrollbar={{ draggable: true }}
