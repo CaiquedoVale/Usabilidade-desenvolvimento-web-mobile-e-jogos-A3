@@ -26,8 +26,12 @@
     flex-direction: column;
     gap: 2rem;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 
     .container-input-ai {
+      width: 100%;
+
       .input-ai {
         flex-grow: 1;
         padding: 1rem;
@@ -51,6 +55,12 @@
         border-radius: 0 0.5rem 0.5rem 0;
         cursor: pointer;
         transition: background-color 0.3s ease-in-out;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        min-width: 110px; /* prevent layout shift when text hides */
       }
 
       .button-ai:hover {
@@ -58,11 +68,31 @@
         color: var(--text-secondary-green-dark);
         font-weight: bold;
       }
+
+      /* Loading state: hide text and show spinner */
+      .button-ai.button-loading .button-text {
+        visibility: hidden; /* keep button width but hide text visually */
+      }
+
+      .button-ai .btn-spinner {
+        width: 18px;
+        height: 18px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        position: absolute; /* centered over hidden text */
+      }
+
+      .button-ai:disabled {
+        opacity: 0.8;
+        cursor: not-allowed;
+      }
     }
 
     .ai-response-box {
       width: 100%;
-      margin: 0 auto;
+      margin: 0; /* prevent wrapper height/width mismatches */
       min-height: 100px;
       background-color: #f9fafb;
       padding: 1rem;
@@ -73,28 +103,37 @@
       color: var(--text-dark);
       resize: none;
       font-family: Arial, Helvetica, sans-serif;
+      box-sizing: border-box; /* include padding/border in width */
     }
 
     .response-wrapper {
       position: relative;
       width: 50%;
-      margin: 0 auto;
+      border-radius: 0.5rem; /* match textarea radius */
+      overflow: hidden; /* clip overlay to the field bounds */
+
+      @media (max-width: 1000px) {
+        width: 80%;
+      }
+
+      @media (max-width: 768px) {
+        width: 90%;
+      }
     }
 
     .ai-response-box.loading {
-      opacity: 0.6;
+      opacity: 0.6; /* visual feedback only, no size change */
     }
 
     .loading-overlay {
       position: absolute;
-      inset: 0;
+      inset: 0; /* exactly matches wrapper content box */
       display: flex;
       align-items: center;
       justify-content: center;
       background: rgba(255, 255, 255, 0.6);
-      border-radius: 0.5rem;
-      pointer-events: none; /* allow no interaction while showing */
-      width: 100%;
+      border-radius: inherit; /* follow wrapper radius */
+      pointer-events: none;
     }
 
     .loading-dots {
@@ -133,6 +172,15 @@
       40% {
         transform: translateY(-8px);
         opacity: 1;
+      }
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(360deg);
       }
     }
   }

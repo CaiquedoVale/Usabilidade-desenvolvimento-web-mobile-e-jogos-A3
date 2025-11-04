@@ -13,10 +13,10 @@ export default function AboutPage() {
           <a className="header-link" href="/">
             Inicio
           </a>
-          <a className="header-link" href="/">
+          <a className="header-link" href="/event">
             Evento
           </a>
-          <a className="header-link" href="/">
+          <a className="header-link" href="/regulation">
             Regulamento
           </a>
         </Header>
