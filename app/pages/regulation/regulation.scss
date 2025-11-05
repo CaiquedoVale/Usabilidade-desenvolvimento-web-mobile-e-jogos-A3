@@ -1,0 +1,121 @@
+.regulation-page-section-one {
+  height: 100vh;
+  background-image: url("/assets/thumbnail_regulation_tree.png");
+  background-size: cover;
+  background-position: 70% center;
+  background-repeat: no-repeat;
+}
+
+.image-grid-section {
+  padding: 4rem 2rem;
+  background-color: var(--primary-bg, #f4f4f4);
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--main-text, #333);
+  }
+}
+
+.image-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1540px;
+  margin: 0 auto;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+  height: 300px;
+  text-decoration: none;
+  color: var(--main-text, #333);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease, 
+    background-image 0.4s ease-in-out;
+
+  .image-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1rem;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(4px);
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.motor-card {
+  background-image: url("/assets/motor_holograma.png");
+  &:hover {
+    background-image: url("/assets/motor_real.png");
+  }
+}
+
+.suspensao-card {
+  background-image: url("/assets/suspensao_holograma.png");
+  &:hover {
+    background-image: url("/assets/suspensao_real.png");
+  }
+}
+
+.freios-card {
+  background-image: url("/assets/freios_holograma.png");
+  &:hover {
+    background-image: url("/assets/freios_real.png");
+  }
+}
+
+.gaiola-card {
+  background-image: url("/assets/gaiola_holograma.png");
+  &:hover {
+    background-image: url("/assets/gaiola_real.png");
+  }
+}
+
+.combustivel-card {
+  background-image: url("/assets/combustivel_holograma.png");
+  &:hover {
+    background-image: url("/assets/combustivel_real.png");
+  }
+}
+
+.reboque-card {
+  background-image: url("/assets/reboque_holograma.png");
+  &:hover {
+    background-image: url("/assets/reboque_real.png");
+  }
+}
+
+@media (max-width: 1024px) {
+  .image-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .image-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .image-grid-section {
+    padding: 2rem 1rem;
+  }
+}
