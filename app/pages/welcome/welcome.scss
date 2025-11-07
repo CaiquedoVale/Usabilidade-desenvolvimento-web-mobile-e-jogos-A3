@@ -1,18 +1,15 @@
-$neon-primary: #f8bc39;
-$neon-secondary: #f8c659;
-
 .welcome-section {
   height: 100vh;
   width: 100%;
-  background-image: 
-  linear-gradient(
-    to bottom,
-    rgba(10, 10, 10, 0.8) 0%,    
-    rgba(10, 10, 10, 0) 25%,     
-    rgba(10, 10, 10, 0) 60%,     
-    #0a0a0a 100%                 
-  ),
-  url("/assets/page-home-thumbnail.png");
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(10, 10, 10, 0.8) 0%,
+      rgba(10, 10, 10, 0) 25%,
+      rgba(10, 10, 10, 0) 60%,
+      #0a0a0a 100%
+    ),
+    url("/assets/page-home-thumbnail.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +21,7 @@ $neon-secondary: #f8c659;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 5% 15vh 5%; 
+  padding: 0 5% 15vh 5%;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -40,7 +37,7 @@ $neon-secondary: #f8c659;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border-left: 4px solid $neon-primary;
+    border-left: 4px solid var(--text-yellow-light);
 
     .info-item {
       display: flex;
@@ -51,7 +48,7 @@ $neon-secondary: #f8c659;
         font-size: 0.8rem;
         text-transform: uppercase;
         letter-spacing: 1.5px;
-        color: $neon-primary;
+        color: var(--text-yellow-light);
         font-weight: 600;
         opacity: 0.9;
       }
@@ -60,7 +57,7 @@ $neon-secondary: #f8c659;
         font-size: 1.2rem;
         color: #ffffff;
         font-weight: 700;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
       }
     }
 
