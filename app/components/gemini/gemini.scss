@@ -1,3 +1,6 @@
+$neon-primary: #f8bc39;
+$neon-secondary: #f8c659;
+
 .container-gemini {
   color: var(--secondary-text);
   display: flex;
@@ -6,7 +9,7 @@
   text-align: center;
   flex-direction: column;
   margin-top: 2rem;
-  background-color: #95ff8d;
+  background-color: $neon-primary;
   min-height: 80vh;
 
   .title-section {

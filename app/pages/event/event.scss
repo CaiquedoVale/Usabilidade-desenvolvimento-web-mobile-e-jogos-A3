@@ -1,78 +1,229 @@
+$neon-primary: #f8bc39;
+$neon-secondary: #f8c659;
+$bg-dark: #121212;
+$bg-card: #1e1e1e;
+$text-light: #e0e0e0;
+
+/* --- SEÇÃO 1: HOME (CABEÇALHO) --- */
 .event-page-section-one {
-  min-height: 100vh;
-  background-image: url("/assets/page-event-thumbnail.png");
+  height: 100vh;
+  width: 100%;
+  background-image: 
+  linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.8) 0%,    
+    rgba(10, 10, 10, 0) 25%,     
+    rgba(10, 10, 10, 0) 60%,     
+    #121212 100%                 
+  ),
+  url("/assets/thumbnail_event.jpeg");
   background-size: cover;
-  background-position: calc(100% - 70%) center;
+  background-position: center;
   background-repeat: no-repeat;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .event-page-section-one-text {
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+  }
 }
 
-.event-page-section-two {
-  background-color: var(--primary-bg);
-  padding: 2rem;
-  min-height: 80vh;
+/* --- SEÇÃO 2: PLACAR GERAL --- */
+.score-section {
+  background-color: $bg-dark;
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 2; 
 
-  .baja-project-event-info {
-    display: flex;
-    font-size: 32px;
-    justify-content: center;
+  .intro-text {
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
 
-    .location-date-info {
-      display: flex;
-
-      .location {
-        flex-direction: column;
-        width: 50%;
-        display: flex;
-        justify-content: center;
-
-        @media (max-width: 768px) {
-          width: 100%;
-        }
-      }
-
-      .date {
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-
-        @media (max-width: 768px) {
-          width: 100%;
-          justify-content: flex-start;
-        }
-      }
-
-      @media (max-width: 768px) {
-        flex-wrap: wrap;
-        padding: 0;
-      }
+    h2 {
+      font-size: 3rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
     }
 
-    @media (max-width: 768px) {
-      font-size: 20px;
+    p {
+      font-size: 1.3rem;
+      color: $text-light;
+      line-height: 1.6;
     }
   }
 
-  .event-organization {
+  .score-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .score-card {
+      background-color: $bg-card;
+      border: 1px solid #333;
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      text-align: left;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+      h3 {
+        font-size: 4.5rem;
+        color: $neon-primary;
+        margin: 0;
+        line-height: 1;
+
+        span {
+          font-size: 1.8rem;
+          color: #fff;
+          text-transform: uppercase;
+          margin-left: 5px;
+        }
+      }
+
+      h4 {
+        color: #fff;
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+        border-bottom: 3px solid $neon-secondary;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          color: $text-light;
+          margin-bottom: 1rem;
+          font-size: 1.15rem;
+          
+          &:before {
+            content: '>';
+            color: $neon-primary;
+            margin-right: 10px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+        border-color: $neon-primary;
+        box-shadow: 0 15px 50px -10px $neon-secondary;
+      }
+    }
+  }
+}
+
+/* --- SEÇÃO 3: FASES DA COMPETIÇÃO --- */
+.phases-section {
+  background-color: #181818;
+  padding: 6rem 2rem;
+  color: $text-light;
+
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .phase-block {
+    max-width: 1000px;
+    margin: 0 auto 4rem auto;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
     align-items: center;
+    gap: 4rem;
+    background-color: $bg-card;
+    padding: 3rem;
+    border-radius: 20px;
+    border-left: 6px solid $neon-primary;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
 
-    .container-info {
-      width: 25%;
+    &:hover {
+      transform: scale(1.02);
+    }
 
-      @media (max-width: 768px) {
-        width: 100%;
+    .phase-icon {
+      font-size: 5rem;
+      min-width: 140px;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255,255,255,0.05);
+      border-radius: 50%;
+      border: 2px solid $neon-secondary;
+    }
+
+    .phase-content {
+      h3 {
+        color: $neon-secondary;
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+        line-height: 1.7;
+
+        strong {
+          color: #fff;
+        }
       }
     }
 
-    .title {
-      font-size: 32px;
+    &.reverse {
+      flex-direction: row-reverse;
+      border-left: none;
+      border-right: 6px solid $neon-secondary;
+      text-align: right;
     }
+  }
+}
 
-    .subtitle {
-      font-size: 24px;
+@media (max-width: 1024px) {
+  .score-section {
+    .score-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .score-section {
+    .intro-text {
+      h2 {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .phases-section {
+    .phase-block {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+
+      &.reverse {
+        flex-direction: column;
+        border-right: none;
+        border-left: 6px solid $neon-secondary;
+        text-align: center;
+      }
     }
   }
 }
