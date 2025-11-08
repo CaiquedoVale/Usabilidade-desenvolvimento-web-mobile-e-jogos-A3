@@ -18,7 +18,7 @@ body {
       rgba(10, 10, 10, 0) 60%,
       #0a0a0a 100%
     ),
-    url("/assets/thumbnail_regulation.png");
+    url("/assets/thumbnail_regulation.jpeg");
   background-size: cover;
   background-position: 70% center;
   background-repeat: no-repeat;
@@ -312,7 +312,7 @@ body {
     background-image: url("/assets/chassi_real.png");
   }
 }
-.suspensao-card {
+.suspension-card {
   background-image: url("/assets/suspensao_holo.png");
   &:hover {
     background-image: url("/assets/suspensao_real.png");

@@ -91,8 +91,8 @@ export default function EventPage() {
             <p>
               Testes individuais para validar o projeto na prática:{" "}
               <strong>Aceleração</strong>,<strong>Velocidade Máxima</strong>,{" "}
-              <strong>Tração</strong> e o desafiador circuito de
-              <strong>Suspensão e Manobrabilidade</strong> com obstáculos.
+              <strong>Tração</strong> e o desafiador circuito de 
+              <strong> Suspensão e Manobrabilidade</strong> com obstáculos.
             </p>
           </div>
         </div>

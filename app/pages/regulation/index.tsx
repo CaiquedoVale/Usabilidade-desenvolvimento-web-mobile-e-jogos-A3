@@ -78,14 +78,14 @@ export default function RegulationPage() {
           text: "Verificar validade SFI/FIA. Tiras dos ombros não podem ser cruzadas.",
         },
         {
-          top: "75%",
-          left: "30%",
+          top: "50%",
+          left: "80%",
           title: "Extintor",
           text: "Suporte metálico obrigatório com saque rápido. Manômetro no verde.",
         },
         {
-          top: "50%",
-          left: "80%",
+          top: "75%",
+          left: "30%",
           title: "Parede Corta-Fogo",
           text: "Chapa metálica separando totalmente o piloto do motor.",
         },
